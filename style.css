@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #eee;
+}
+
+textarea {
+    width: 100%;
+    margin: 20px auto;
+    min-height: 200px;
+    resize: none;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    display: inline-block;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.card p {
+    font-family: arial !important;
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.card input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    outline: 0;
+    margin: 15px auto;
+    display: none;
+}
