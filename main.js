@@ -1,7 +1,7 @@
 const new_tweet_btn = document.querySelector('button');
 const txtarea = document.querySelector('textarea');
 const cards = document.querySelector('.cards');
-const API = 'http://localhost:3000/tweets';
+const API = 'https://crud-database.herokuapp.com/tweets';
 
 // On Button Click
 new_tweet_btn.addEventListener('click', () => {
@@ -112,10 +112,15 @@ cards.addEventListener('click', e => {
     }
 
     // Watch the Save button
-    if (e.target.classList.contains('btn-success')) {   
+    if (e.target.classList.contains('btn-success')) { 
+ 
         let id = e.target.getAttribute('data-id');
         let card = e.target.parentNode;
-
+        card.querySelector('p').style.display = 'block';
+        card.querySelector('input').style.display = 'none';
+        card.querySelector('.btn-success').style.display = 'none';
+        card.querySelector('.btn-danger').style.display = 'inline-block';
+        card.querySelector('.btn-warning').style.display = 'inline-block'; 
         const obj = {
             body: card.querySelector('input').value
         };
